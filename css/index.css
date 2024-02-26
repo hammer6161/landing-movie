@@ -147,9 +147,50 @@ iframe {
 	border-color: #ffffff;
 }
 
-/* Дополнительное задание */
+.hero {
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 60px;
+	padding-top: 33vw;
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.76) 66%, rgba(0, 0, 0, 1) 100%),
+		image-set(
+			url("../img/bg-hero@2x.avif") type("image/avif") 2x,
+			url("../img/bg-hero.avif") type("image/avif"),
+			url("../img/bg-hero@2x.webp") type("image/webp") 2x,
+			url("../img/bg-hero.webp") type("image/webp"),
+			url("../img/bg-hero@2x.jpg") 2x,
+			url("../img/bg-hero.jpg")
+		);
+}
 
-/* end */
+.hero__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: end;
+}
+
+.hero__banner {
+	max-width: 795px;
+	margin-bottom: 2px;
+}
+
+.hero__date {
+	color: #ff3d00;
+	font-size: 40px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.hero__arrow {
+	width: 64px;
+	height: 64px;
+}
+.hero__arrow:hover {
+	color: #ff3d00;
+}
 
 .about {
 	padding: 60px 0;
