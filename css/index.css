@@ -161,12 +161,12 @@ iframe {
 	padding-top: calc(476 / 1440 * 100%);
 	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.76) 66%, rgba(0, 0, 0, 1) 100%),
 		image-set(
-			url("../img/bg-hero@2x.avif") type("image/avif") 2x,
-			url("../img/bg-hero.avif") type("image/avif"),
-			url("../img/bg-hero@2x.webp") type("image/webp") 2x,
-			url("../img/bg-hero.webp") type("image/webp"),
-			url("../img/bg-hero@2x.jpg") 2x,
-			url("../img/bg-hero.jpg")
+			url("../img/hero/bg-hero@2x.avif") type("image/avif") 2x,
+			url("../img/hero/bg-hero.avif") type("image/avif"),
+			url("../img/hero/bg-hero@2x.webp") type("image/webp") 2x,
+			url("../img/hero/bg-hero.webp") type("image/webp"),
+			url("../img/hero/bg-hero@2x.jpg") 2x,
+			url("../img/hero/bg-hero.jpg")
 		);
 }
 
@@ -265,7 +265,7 @@ iframe {
 	display: flex;
 	gap: 12px;
 	align-items: center;
-	padding-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .trailers__button {
@@ -276,6 +276,7 @@ iframe {
 	font-size: 14px;
 	text-transform: uppercase;
 	color: #fff;
+	white-space: nowrap;
 }
 
 .trailers__button_active {
@@ -347,6 +348,15 @@ iframe {
 	.hero {
 		padding-top: calc(337 / 1024 * 100%);
 		padding-bottom: 50px;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.76) 66%, rgba(0, 0, 0, 1) 100%),
+			image-set(
+				url("../img/hero/bg-hero1024@2x.avif") type("image/avif") 2x,
+				url("../img/hero/bg-hero1024.avif") type("image/avif"),
+				url("../img/hero/bg-hero1024@2x.webp") type("image/webp") 2x,
+				url("../img/hero/bg-hero1024.webp") type("image/webp"),
+				url("../img/hero/bg-hero1024@2x.jpg") 2x,
+				url("../img/hero/bg-hero1024.jpg")
+			);
 	}
 	.hero__banner {
 		width: 639px;
@@ -354,9 +364,25 @@ iframe {
 	.hero__date {
 		font-size: 32px;
 	}
+	.about {
+		padding: 50px 0;
+	}
 	.about__container::after {
-		flex-basis: 436px;
+		flex-basis: 50%;
 		background-image: url("../img/aang1024.jpg");
+	}
+	.about__content {
+		flex-basis: 50%;
+	}
+	.about__title {
+		font-size: 40px;
+		margin-bottom: 24px;
+	}
+	.about__description {
+		font-size: 16px;
+	}
+	.trailers {
+		padding: 50px 0 100px;
 	}
 }
 
@@ -375,6 +401,15 @@ iframe {
 		padding-top: calc(337 / 768 * 100%);
 		/* padding-top: 43vw; */
 		padding-bottom: 40px;
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.76) 66%, rgba(0, 0, 0, 1) 100%),
+			image-set(
+				url("../img/hero/bg-hero768@2x.avif") type("image/avif") 2x,
+				url("../img/hero/bg-hero768.avif") type("image/avif"),
+				url("../img/hero/bg-hero768@2x.webp") type("image/webp") 2x,
+				url("../img/hero/bg-hero768.webp") type("image/webp"),
+				url("../img/hero/bg-hero768@2x.jpg") 2x,
+				url("../img/hero/bg-hero768.jpg")
+			);
 	}
 	.hero__banner {
 		width: 639px;
@@ -396,6 +431,19 @@ iframe {
 		flex-basis: 300px;
 		background-image: url("../img/aang768.jpg");
 	}
+	.about__title {
+		max-width: 370px;
+	}
+	.trailers {
+		padding: 40px 0 80px;
+	}
+	.trailers__buttons {
+		gap: 8px;
+	}
+	.trailers__button {
+		font-size: 12px;
+		padding: 10px 16px;
+	}
 }
 
 @media (max-width: 580px) {
@@ -412,10 +460,20 @@ iframe {
 	.header__link {
 		display: none;
 	}
-	/* .hero {
+	.hero {
 		padding-top: calc(173 / 320 * 100%);
-		padding-top: 54vw;
-	} */
+		padding-bottom: 30px;
+		/* padding-top: 54vw; */
+		background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.76) 66%, rgba(0, 0, 0, 1) 100%),
+			image-set(
+				url("../img/hero/bg-hero320@2x.avif") type("image/avif") 2x,
+				url("../img/hero/bg-hero320.avif") type("image/avif"),
+				url("../img/hero/bg-hero320@2x.webp") type("image/webp") 2x,
+				url("../img/hero/bg-hero320.webp") type("image/webp"),
+				url("../img/hero/bg-hero320@2x.jpg") 2x,
+				url("../img/hero/bg-hero320.jpg")
+			);
+	}
 	.hero__banner {
 		width: 288px;
 	}
@@ -426,7 +484,36 @@ iframe {
 		display: block;
 		margin-bottom: 32px;
 	}
+	.about {
+		padding: 30px 0;
+	}
 	.about__container::after {
 		background-image: url("../img/aang320.jpg");
+	}
+	.about__title {
+		font-size: 28px;
+		margin-bottom: 16px;
+	}
+	.trailers {
+		padding: 30px 0 60px;
+	}
+	.trailers__container {
+		padding: 0;
+	}
+	.trailers__buttons {
+		padding: 0 16px;
+		overflow-x: scroll;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.trailers__buttons::-webkit-scrollbar {
+		display: none;
+	}
+	.trailers__button {
+		font-size: 12px;
+		padding: 10px 16px;
+	}
+	.trailers__list {
+		padding: 0 16px;
 	}
 }
