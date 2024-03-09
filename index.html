@@ -7,8 +7,13 @@
 		<link rel="icon" href="img/icon.svg" type="image/svg+xml" />
 		<link rel="icon" href="img/icon.png" type="image/png" />
 
+		<link rel="preload" href="fonts/inter-v13-cyrillic_latin-regular.woff2" as="font" crossorigin />
+		<link rel="preload" href="fonts/inter-v13-cyrillic_latin-600.woff2" as="font" crossorigin />
+
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/index.css" />
+
+		<script src="js/index.js" defer></script>
 
 		<title>ПРО КИНО Аватар: Легенда об Аанге</title>
 	</head>
@@ -59,26 +64,19 @@
 				<div class="container trailers__container">
 					<ul class="trailers__buttons">
 						<li class="trailers__item-button">
-							<button class="trailers__button trailers__button_active" area-label="Трейлер">трейлер 1</button>
+							<button class="trailers__button trailers__button_active" area-label="Трейлер" data-src="https://www.youtube.com/embed/zCFxadhcJTw?si=3RoqJyxUEaVVZj_h">трейлер 1</button>
 						</li>
 						<li class="trailers__item-button">
-							<button class="trailers__button" area-label="Тизер">трейлер 2</button>
+							<button class="trailers__button" area-label="Тизер" data-src="https://www.youtube.com/embed/6ThRbiEfQfo?si=Gmxeyiow6qU7uMwD">трейлер 2</button>
 						</li>
 						<li class="trailers__item-button">
-							<button class="trailers__button" area-label="backstage">трейлер 3</button>
-						</li>
-					</ul>
-					<ul class="trailers__list">
-						<li class="trailers__item">
-							<div class="trailers__wrapper">
-								<iframe class="trailers__video" src="https://www.youtube.com/embed/ByAn8DF8Ykk" title="YouTube video player"></iframe>
-							</div>
+							<button class="trailers__button" area-label="backstage" data-src="https://www.youtube.com/embed/aVclaOeuPmM?si=L6WJr1td0BjqqFIQ">трейлер 3</button>
 						</li>
 					</ul>
 				</div>
 			</section>
 		</main>
-		<!--  
+
 		<footer class="footer">
 			<div class="container footer__container">
 				<ul class="footer__developers">
@@ -95,5 +93,5 @@
 				<img class="footer__logo" src="img/logo.svg" alt="логотип ПРО КИНО" />
 			</div>
 		</footer>
-		--></body>
+	</body>
 </html>

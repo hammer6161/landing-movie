@@ -289,6 +289,7 @@ iframe {
 }
 
 .trailers__wrapper {
+	display: none;
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
@@ -322,7 +323,7 @@ iframe {
 }
 
 .footer__link {
-	margin-bottom: 7px;
+	margin-bottom: 8px;
 }
 
 .footer__link:hover {
@@ -444,6 +445,22 @@ iframe {
 		font-size: 12px;
 		padding: 10px 16px;
 	}
+	.footer {
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	.footer__container {
+		gap: 20px;
+	}
+	.footer__developers {
+		font-size: 12px;
+	}
+	.footer__copyright {
+		font-size: 12px;
+	}
+	.footer__logo {
+		width: 217px;
+	}
 }
 
 @media (max-width: 580px) {
@@ -515,5 +532,15 @@ iframe {
 	}
 	.trailers__list {
 		padding: 0 16px;
+	}
+	.footer__container {
+		grid-template-areas:
+			"logo"
+			"developers"
+			"copyright";
+	}
+	.footer__logo {
+		margin-bottom: 4px;
+		justify-self: start;
 	}
 }
